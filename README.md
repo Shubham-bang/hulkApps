@@ -1,64 +1,65 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Set-up guidelines
 
-## About Laravel
+I'm using laravel 8.75 version in this project..
+Please Run the folllowing command after cloning the project -
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- composer install.
+- create a .env file and add your database name in DB_DATABASE field in env file.
+- php artisan key:generate
+- php artisan migrate.
+- php artisan db:seed.
+- php artisan serve.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### SQL Data
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- when "php artisan db:seed" command will run all static data will insert on table.
 
-## Learning Laravel
+### Credentails
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+    - HR-Credentials 
+        email : hr@gmail.com
+        password : 123456789
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+    - employees credentials
+        email : user1@gmail.com
+        password : 123456789
 
-## Laravel Sponsors
+        email : user2@gmail.com
+        password : 123456789
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Project go-thrugh
 
-### Premium Partners
+-- HR Endpoint	
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+ when your project is started you will redirect to the login page. enter the HR credentials you will redirect to the HR dashboard.
+ if HR click on employees in the sidebar then, HR can see the listing of their employees.
+ if HR click on Leave a drop-down will open and after clicking on All leaves HR can see all the listing of Leave applied by employees.
+ HR can see which employee apply for leave and by clicking on the view they can see all the information about leave.
+ if, the leave status is pending and HR wants to apply/deny the leave so, when HR clicks on the view button after that, there is a button take action on the bottom after clicking on take action button a pop-up will open and if hr granted the leave then, leave will be approved and if hr rejected the leave an accordion will open and hr will write the reason of rejection of leave and leave will be rejected.
 
-## Contributing
+-- Employee Endpoint
+ 
+ when your project is started you will redirect to the login page. enter the Employee credentials you will redirect to the Employee dashboard.
+ if an employee click on Leave a drop-down will open will two options leave history and apply for leave.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+ in Apply leave a form will open. employee select their leave-type(casual, sick, paid, leave without pay) leave, leave start-date, select half means in which half they want to take leave first-half or in end-half, select leave end date, select end -date half, and in last employee give reason of their leave.
 
-## Code of Conduct
+ thier is some conditions
+ - if employee select casual leave or paid leave so, they cannot take more than 2 leave together.
+ - if employee select sick leave so, they cannot take more than 6 leave together.
+ - if employee select same start-date and end-date and same start-date half and end-date half so, its means thier leave will count as 0.5 days.
+ - if employee select same start-date and end-date but diffrent start-date half and end-date half so, its means thier leave will count as 1 days.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Approach
 
-## License
+The employee Leave Module system is interesting, and I’m working on it for the first time.
+In this project, I followed the structure of "Kredily". Kredily is a Payroll and HR software.i used Kredily to apply for leave in the previous company. so, I follow the Kredily leave structure in this project.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## Time-Taken On Project
+
+ I started working on this project on Friday night after 8 PM and complete this project on Sunday with testing.
+
