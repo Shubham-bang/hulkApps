@@ -16,7 +16,7 @@ use App\Http\Controllers\LeaveController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect('login');
 });
 
 Route::group(['middleware'=>['auth']],function(){
@@ -38,6 +38,7 @@ Route::group(['middleware'=>['auth', 'user']],function(){
 Route::group(['middleware'=>['auth', 'HR']],function(){
 
     /********* HR EndPoints *********/
+    Route::get('/users_listing', [UsersControllers::class, 'index'])->name('users.index');
     Route::get('/leaves_list', [LeaveController::class, 'leaveListing'])->name('hr.leave_request');
     Route::post('/decline_leave_request', [LeaveController::class, 'declineLeaveByHR'])->name('hr.decline_leave_request');
     Route::post('/accept_leave_request', [LeaveController::class, 'acceptLeaveByHR']);

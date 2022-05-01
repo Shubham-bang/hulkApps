@@ -31,9 +31,9 @@
                       <tr>
                         <td>{{$key + 1}}</td>
                         <td>{{$leave->leaveType->leave_type}}</td>
-                        <td>{{$leave->start_date}}</td>
+                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d',  $leave->start_date)->isoFormat('Do MMM YYYY') }}</td>
                         <td>
-                        {{$leave->end_date}}
+                        {{ \Carbon\Carbon::createFromFormat('Y-m-d',  $leave->end_date)->isoFormat('Do MMM YYYY') }}
                         </td>
                         <td style="text-align : center;">{{$leave->no_of_days}}</td>
                         <td>

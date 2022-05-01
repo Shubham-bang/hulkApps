@@ -99,57 +99,8 @@
                               </button>
                             </div>
                           </div>
-                          <span class="fw-semibold d-block mb-1">Paid Leave</span>
-                          <h5 class="card-title text-nowrap mb-2">Paid Leave Credit - 10</h5>
-                          <h5 class="card-title text-nowrap mb-2">Paid Leave Used - 5</h5>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="card-title d-flex align-items-start justify-content-between">
-                            <div class="avatar flex-shrink-0">
-                              <img src="{{asset('assets/img/icons/brands/32441.png')}}" alt="Credit Card" class="rounded" />
-                            </div>
-                            <div class="dropdown">
-                              <button
-                                class="btn p-0"
-                                type="button"
-                                id="cardOpt1"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                              </button>
-                            </div>
-                          </div>
-                          <span class="fw-semibold d-block mb-1">Pending Leave Request</span>
-                          <h3 class="card-title mb-2"></h3>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-4 mb-4">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="card-title d-flex align-items-start justify-content-between">
-                            <div class="avatar flex-shrink-0">
-                              <img src="{{asset('assets/img/icons/brands/32441.png')}}" alt="Credit Card" class="rounded" />
-                            </div>
-                            <div class="dropdown">
-                              <button
-                                class="btn p-0"
-                                type="button"
-                                id="cardOpt1"
-                                data-bs-toggle="dropdown"
-                                aria-haspopup="true"
-                                aria-expanded="false"
-                              >
-                              </button>
-                            </div>
-                          </div>
-                          <span class="fw-semibold d-block mb-1">Pending Leave Request</span>
-                          <h3 class="card-title mb-2"></h3>
+                          <span class="fw-semibold d-block mb-1">Employees</span>
+                          <h5 class="card-title text-nowrap mb-2">{{$data['users']}}</h5>
                         </div>
                       </div>
                     </div>

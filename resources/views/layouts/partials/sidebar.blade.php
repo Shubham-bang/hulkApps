@@ -98,6 +98,12 @@
             @endif
             @if(Auth::user()->role == 'HR')
             <li class="menu-item">
+              <a href="{{URL('/users_listing')}}" class="menu-link">
+                <i class="menu-icon tf-icons bx bx bx-user"></i>
+                <div data-i18n="Analytics">Employees</div>
+              </a>
+            </li>
+            <li class="menu-item">
               <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons bx bx bx-user"></i>
                 <div data-i18n="Account Settings">Leave</div>

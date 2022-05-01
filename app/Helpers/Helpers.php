@@ -17,7 +17,6 @@ class Helpers
                 $leave_days = 1;
                 return $leave_days;
             }
-            dd('shubham');
             
         } else {
             $datetime1  = new \DateTime($s_date);

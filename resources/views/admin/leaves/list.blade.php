@@ -41,7 +41,7 @@
                           <div class="col-sm-4">
                             <div class="input-group input-group-merge">
                               
-                            <input type="text" class="form-control" readonly value="{{$report->start_date}}">
+                            <input type="text" class="form-control" readonly value="{{ \Carbon\Carbon::createFromFormat('Y-m-d',  $report->start_date)->isoFormat('Do MMM YYYY') }}">
 
                             </div>
                           </div>
@@ -59,7 +59,7 @@
                           <div class="col-sm-4">
                             <div class="input-group input-group-merge">
                               
-                            <input type="text" class="form-control" readonly value="{{$report->end_date}}">
+                            <input type="text" class="form-control" readonly value="{{ \Carbon\Carbon::createFromFormat('Y-m-d',  $report->end_date)->isoFormat('Do MMM YYYY') }}">
 
                             </div>
                           </div>

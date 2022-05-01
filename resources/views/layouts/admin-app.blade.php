@@ -239,7 +239,7 @@
     <script src="{{ URL::asset('assets/js/main.js')}}"></script>
     <script src="{{ URL::asset('js/tables/datatable/datatables.min.js') }}"></script>
     <script src="{{ URL::asset('js/tables/datatable/dataTables.buttons.min.js') }}"></script>  
-   <script src="{{ asset('js/datatable-basic.js') }}"></script
+   <script src="{{ asset('js/datatable-basic.js') }}"></script>
 
     <!-- Page JS -->
     <script src="{{ URL::asset('assets/js/dashboards-analytics.js')}}"></script>
