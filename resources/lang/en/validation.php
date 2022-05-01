@@ -154,8 +154,11 @@ return [
         'end_date' => [
             'required' => 'Please select your Leave end Date',
         ],
-        'day_type' => [
-            'required' => 'Please select Day type',
+        'start_half_type' => [
+            'required' => 'Please select start date Day type',
+        ],
+        'end_half_type' => [
+            'required' => 'Please select end date Day type',
         ],
         'reason' => [
             'required' => 'Please give reason for leave',
